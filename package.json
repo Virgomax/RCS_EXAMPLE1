@@ -1,0 +1,18 @@
+{
+  "name": "rcs_example1",
+  "version": "1.0.0",
+  "description": "Example of reuse-cucumber-scenarios library",
+  "dependencies": {},
+  "scripts": {
+    "start": "cucumber-js features",
+    "playground-performance": "node playground/performanceTest.js"
+  },
+  "devDependencies": {
+    "cucumber": "^4.2.1",
+    "expect": "^1.20.2",
+    "glob": "^7.1.2",
+    "reuse-cucumber-scenarios": "^1.1.5",
+    "selenium-webdriver": "^3.6.0",
+    "util-arity": "^1.1.0"
+  }
+}
