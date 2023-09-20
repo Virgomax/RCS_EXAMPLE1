@@ -4,13 +4,13 @@ const BasePage = require('./BasePage.class');
 class ComplicatedPage extends BasePage {
 
   async open(){
-    await this.goTo('https://www.ultimateqa.com/complicated-page/');
+    await this.goTo('https://ultimateqa.com/complicated-page/');
   }
 
   async searchArticles(searchedText){
     await this.fillOutField('//*[@id="s"]',searchedText);
     await this.clickOn('//*[@id="searchsubmit"]');
-    var expectedUrl = 'https://www.ultimateqa.com/?s='+encodeURIComponent(searchedText).replace('%20',"\\+");
+    var expectedUrl = 'https://ultimateqa.com/?s='+encodeURIComponent(searchedText).replace('%20',"\\+");
     await this.driver.wait(until.urlIs(expectedUrl));
     var resultsElem = await this.getElementsByXPath('//*[@class="entry-title"]/a');
     var results = await Promise.all(resultsElem.map((resultElem)=>{

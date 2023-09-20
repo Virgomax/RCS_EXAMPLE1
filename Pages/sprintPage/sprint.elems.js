@@ -20,7 +20,7 @@ const forms = { //HTML name attributes of form elements
 }
 
 const buttonNames = { //x-path of element
-  submit1: '//form[@action="https://www.ultimateqa.com"]//input[@type="submit"]'
+  submit1: '//form[@action="https://ultimateqa.com"]//input[@type="submit"]'
 }
 
 const sprintElements = {

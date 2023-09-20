@@ -23,11 +23,11 @@ const stepDefinitions = {
   step1: {
     stepMethod: 'Then',
     stepPattern: 'the user {string} should be redirected to {string} page',
-    stepTimeout: 10000,
+    stepTimeout: 20000,
     stepFunction: async (userId, nextPage)=>{
       console.log(`the user ${userId} should be redirected to ${nextPage} page`)
       await MyDriver.switchTo(userId);    //switch to user's window
-      var expectedUrl = bFun.createUrl('https://www.ultimateqa.com/',CuStore.formValues[userId]);   //create new URL
+      var expectedUrl = bFun.createUrl('https://ultimateqa.com/',CuStore.formValues[userId]);   //create new URL
       var landingPage = await MyPage.activePages[userId]
         .waitUntilUrlIs_caseInsensitive(expectedUrl,MyPage.availablePages[nextPage]);     //wait until it is redirected to new Url and save the new PageObject in landingPage 
       var url = await landingPage.getCurrentUrl();    //get URL from URL bar

@@ -8,7 +8,7 @@ const stepDefinitions = {
   step0: {
     stepMethod: 'When',
     stepPattern: 'the user {string} fills out {string} form using {string}',
-    stepTimeout: 10000,
+    stepTimeout: 15000,
     stepFunction: async (userId, formId, dataEntryId)=>{
       console.log(`the user ${userId} fills out ${formId} form using ${dataEntryId}`)
       await MyDriver.switchTo(userId);  //switch to user's window/

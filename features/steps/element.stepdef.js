@@ -6,7 +6,7 @@ const stepDefinitions = {
   step0: {
     stepMethod: 'When',
     stepPattern: 'the user {string} clicks on {string}',
-    stepTimeout: 10000,
+    stepTimeout: 20000,
     stepFunction: async (userId, elemId)=>{
       console.log(`the user ${userId} clicks on ${elemId}`)
       

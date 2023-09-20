@@ -2,7 +2,7 @@ const {formNames,forms,buttonNames} = require('./sprint.elems');
 
 const sprintContentFunctions = {
   async open(sprintNumber){
-    await this.goTo('https://www.ultimateqa.com/sample-application-lifecycle-sprint-'+sprintNumber);
+    await this.goTo('https://ultimateqa.com/sample-application-lifecycle-sprint-'+sprintNumber);
   },
   
   async ['fillOut_' + forms[formNames.form1].firstName](value){  //function whose name is fillOut_firstname
@@ -18,7 +18,7 @@ const sprintContentFunctions = {
   },
 
   async submit(){
-    await this.clickOn('//form[@action="https://www.ultimateqa.com"]//input[@type="submit"]');
+    await this.clickOn('//form[@action="https://ultimateqa.com"]//input[@type="submit"]');
   },
 
   async submitSprintForm(){
